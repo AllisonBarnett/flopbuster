@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'flopbuster';
+  selectedIndex = -1;
 
   flops = {
     hobbit:
@@ -18,4 +19,28 @@ export class AppComponent {
     cryWilderness:
       'https://cdn.cinematerial.com/p/297x/knnahuxr/cry-wilderness-movie-poster-md.jpg?v=1456385813',
   };
+
+  onVote(index) {
+    if (this.isSelected(index)) {
+      this.selectedIndex = -1;
+    } else {
+      this.selectedIndex = index;
+    }
+  }
+
+  isSelected(index) {
+    return this.selectedIndex === index;
+  }
+
+  anySelected() {
+    return this.selectedIndex !== -1;
+  }
+
+  getButtonText(index) {
+    if (this.isSelected(index)) {
+      return 'Unvote';
+    } else {
+      return 'Vote';
+    }
+  }
 }
