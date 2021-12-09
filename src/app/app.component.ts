@@ -119,4 +119,12 @@ export class AppComponent {
       return 'Vote';
     }
   }
+
+  onFirstSelected() {
+    console.log('first');
+  }
+
+  onSecondSelected() {
+    console.log('second');
+  }
 }

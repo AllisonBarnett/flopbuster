@@ -1,4 +1,4 @@
-<h4>Flopchooser</h4>
+<h2 class="text-lg">Flopchooser</h2>
 
 <div style="margin-bottom: 2rem">
   <p>Which movie has a lower IMDB rating?</p>
@@ -14,7 +14,7 @@
     <img [src]="movie.imageUrl" style="width: 8rem; height: auto" alt="" />
   </div>
 
-  <div style="cursor: pointer">
+  <div (click)="onClick()" style="cursor: pointer">
     <img [src]="movie.imageUrl" style="width: 8rem; height: auto" alt="" />
   </div>
 </div>

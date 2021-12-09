@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-movie-selector',
@@ -6,4 +6,10 @@ import { Component, Input } from '@angular/core';
 })
 export class MovieSelectorComponent {
   @Input() movie;
+  // tslint:disable-next-line:no-output-native
+  @Output() select = new EventEmitter();
+
+  onClick() {
+    this.select.emit();
+  }
 }
