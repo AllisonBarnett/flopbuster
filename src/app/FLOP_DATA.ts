@@ -1,4 +1,4 @@
-flops = [
+export const FLOP_DATA = [
   {
     title: 'Battlefield Earth',
     stars: 2.5,
