@@ -1,1 +1,20 @@
-<app-movie-selector></app-movie-selector>
+<h4>Flopchooser</h4>
+
+<div style="margin-bottom: 2rem">
+  <p>Which movie has a lower IMDB rating?</p>
+  <p>
+    Correct or Incorrect Message Here! (how can you show or hide an element?
+  </p>
+  <button class="btn btn-primary">Play Again</button>
+  (don't show until they choose one)
+</div>
+
+<div style="display: flex; justify-content: space-around">
+  <div style="cursor: pointer">
+    <img [src]="movie.imageUrl" style="width: 8rem; height: auto" alt="" />
+  </div>
+
+  <div style="cursor: pointer">
+    <img [src]="movie.imageUrl" style="width: 8rem; height: auto" alt="" />
+  </div>
+</div>
