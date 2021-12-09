@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FlopChooserService } from './flop-chooser.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'flopbuster';
   selectedIndex = -1;
+  flops;
+
+  constructor(public flopChooser: FlopChooserService) {}
+
+  selectNewFlop() {
+    this.flops = this.flopChooser.getTwoRandomFlops();
+  }
 
   onVote(index) {
     if (this.isSelected(index)) {
