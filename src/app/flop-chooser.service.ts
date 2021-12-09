@@ -17,8 +17,8 @@ export class FlopChooserService {
 
   getTwoRandomFlops() {
     const firstIndex = this.getRandomIndex();
-    let secondIndex = this.getRandomIndex;
-    while (firstIndex === secondIndex) {
+    let secondIndex = this.getRandomIndex();
+    while (secondIndex === firstIndex) {
       secondIndex = this.getRandomIndex();
     }
 
